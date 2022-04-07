@@ -1,5 +1,3 @@
-
-
 #    _______________
 #   /____/____/____/|
 #  /____/____/____/||
@@ -17,17 +15,23 @@
 #     OOO
 #     OOO
 #     OOO
-# WWW GGG BBB YYY
-# YYY WWW GGG BBB
-# YYY WWW GGG BBB
+# WWW GGG YYY BBB
+# BBB WWW GGG YYY
+# BBB WWW GGG YYY
 #     RRR
 #     RRR
 #     RRR
 
 
-# OOOOOOOOOWWWGGGBBBYYYYYYWWWGGGBBBYYYWWWGGGBBBRRRRRRRRR
+#     OOOOOOOOOWWWGGGYYYBBBBBBWWWGGGYYYBBBWWWGGGYYYRRRRRRRRR
 
-import optimal.solver as sv
-cubestring = 'DUUBULDBFRBFRRULLLBRDFFFBLURDBFDFDRFRULBLUFDURRBLBDUDL'
+# "doc" : https://pypi.org/project/rubik-solver/
 
-sv.solve(cubestring, "")
+from rubik_solver import utils
+cube = 'wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
+# cube = 'OOOOOOOOOWWWGGGYYYBBBBBBWWWGGGYYYBBBWWWGGGYYYRRRRRRRRR'.lower()
+print(cube)
+print(utils.solve(cube, 'Beginner'))
+print(utils.solve(cube, 'CFOP'))
+
+# utils.solve(cube, 'Kociemba')
